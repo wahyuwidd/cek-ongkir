@@ -43,7 +43,6 @@ tbody tr:hover {
     background-color: #f1f1f1;
 }
 
-/* Gaya untuk tombol kembali */
 a {
     display: inline-block;
     margin-top: 20px;

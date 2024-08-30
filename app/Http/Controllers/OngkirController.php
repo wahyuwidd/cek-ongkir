@@ -20,12 +20,6 @@ class OngkirController extends Controller
         return view('ongkir.index', compact('provinces', 'cities'));
     }
 
-    public function getCities(Request $request)
-    {
-        $cities = $this->rajaOngkirService->getCities($request->province_id);
-        return response()->json($cities);
-    }
-
     public function checkOngkir(Request $request)
     {
     $origin = $request->origin;
