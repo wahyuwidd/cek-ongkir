@@ -27,7 +27,7 @@ class OngkirController extends Controller
     }
 
     public function checkOngkir(Request $request)
-{
+    {
     $origin = $request->origin;
     $destination = $request->destination;
     $weight = $request->weight;
@@ -36,5 +36,5 @@ class OngkirController extends Controller
     $cost = $this->rajaOngkirService->checkOngkir($origin, $destination, $weight, $courier);
 
     return view('ongkir.result', compact('cost'));
-}
+    }
 }
