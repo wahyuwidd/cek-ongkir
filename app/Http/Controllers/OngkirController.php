@@ -17,10 +17,6 @@ class OngkirController extends Controller
     {
         $provinces = $this->rajaOngkirService->getProvinces();
         $cities = $this->rajaOngkirService->getCities(null);
-    
-        // Tambahkan debugging
-        // dd($provinces, $cities);
-    
         return view('ongkir.index', compact('provinces', 'cities'));
     }
 
@@ -37,10 +33,8 @@ class OngkirController extends Controller
     $weight = $request->weight;
     $courier = $request->courier;
 
-    // Memanggil service untuk menghitung ongkos kirim
     $cost = $this->rajaOngkirService->checkOngkir($origin, $destination, $weight, $courier);
 
-    // Mengirim data cost ke view result
     return view('ongkir.result', compact('cost'));
 }
 }
